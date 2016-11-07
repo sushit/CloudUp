@@ -8,8 +8,6 @@
 	for ($i = 0; $i < 11; $i++) {
 		$alpha_key .= $keys[array_rand($keys)];
 	}
-
-
 	return $alpha_key;
 	}
 

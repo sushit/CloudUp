@@ -7,7 +7,7 @@
 	if (isset($_POST['log_btn'])) {
 		$username= mysql_real_escape_string($_POST['username']);
 		$password= mysql_real_escape_string($_POST['password']);
-		$mdpassword= md5($password);
+		$password= md5($password);
 		$sql="SELECT * FROM admin WHERE username='$username'";	
 		$result= mysqli_query($db,$sql);
 		if (mysqli_num_rows($result) == 1)

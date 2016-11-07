@@ -7,10 +7,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>NMIT Cloud</title>
+  <title>Cloud Storage Console</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="../Theme/mytheme.css">
+  <link rel="stylesheet" href="../bootstrap-3.3.7/dist/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 
@@ -29,7 +29,7 @@
 
 </nav>
 <div class="container-fluid">
-WELCOME <?php echo $_SESSION['username']; ?>
+<h3>WELCOME <?php echo $_SESSION['username']; ?> </h3>
 </div>
 </body>
 </html>

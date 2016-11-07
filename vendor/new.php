@@ -32,6 +32,7 @@ if (isset($_FILES['file']))
 	{
 		echo $e->getMessage();
 	}
+	header("location: ../vendor/listobjects.php");
 }	
 
 ?>
@@ -56,7 +57,7 @@ if (isset($_FILES['file']))
   <title>NMIT Cloud</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="../Theme/mytheme.css">
+  <link rel="stylesheet" href="../bootstrap-3.3.7/dist/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 
@@ -75,12 +76,33 @@ if (isset($_FILES['file']))
 
 </nav>
 <body>
+<style type="text/css">
+	.button {
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    font-size: 20px;
+}
+
+.button:hover {
+    background-color: green;
+    color: white;
+}
+</style>
 <div>
-	<h1>Upload</h1>
+	<h1 style="margin-left: 150px;">Upload File </h1>
+	<br>
+	<br>
 
 <form action="new.php" method="post" enctype="multipart/form-data">
-	<input type="file" name="file"><br>
-	<input type="submit" value="Upload">
+	<input type="file" name="file" style="padding-left: 250px;"><br>
+	<hr style="  display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;">
+	<input type="submit" class="button" style="margin-left: 250px;" value="Upload">
 </form>
 </div>
 </body>

@@ -23,7 +23,7 @@ if ($_SESSION['stat']==1)
     }
     catch(S3Exception $e)
     {
-      echo $e->getMessage();
+       $e->getMessage();
     }
 }
   

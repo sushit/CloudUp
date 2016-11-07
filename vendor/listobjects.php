@@ -13,8 +13,26 @@ $objects = $s3->getIterator('ListObjects',[
 <head>
 	<title>List of objects</title>
 </head>
+<style>
+table, td, th {
+    border: 4px solid black;
+    border-color: black;
+    text-align: left;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border-color: black;
+}
+
+th, td {
+    padding: 15px;
+}
+tr:nth-child(even){background-color: #f2f2f2}
+</style>
 <body>
-<p> Your Files are </p> 
+<h4 align="center"> Your Files are </h4> 
 <table>
 	<thead>
 		<tr>
