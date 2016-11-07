@@ -26,12 +26,13 @@ session_start();
 		}
 			//$_SESSION['bucket']=$op_bucket;
 			//echo $op_bucket;
-			//header("location: ../vendor/front.php");
+			header("location: ../vendor/front.php");
 		}
 		else 
 		{
 			$_SESSION['message']="Username/Password incorrect";
 		}
+		$_SESSION['stat']=0;
 
 		
 	}

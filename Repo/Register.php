@@ -28,7 +28,6 @@
 } 
 	if (isset($_POST['reg_btn'])) {
 		session_start();
-		global $op_bucket;
 		$username= mysql_real_escape_string($_POST['username']);
 		$password=mysql_real_escape_string($_POST['password']);
 		$password2=mysql_real_escape_string($_POST['password2']);	
@@ -46,6 +45,7 @@
 				$op_bucket=$row["bucket"];
 			}
 			$_SESSION['bucket']=$op_bucket;
+			$_SESSION['stat']=1;
 
 			header("location: ../vendor/front.php");
 		}
