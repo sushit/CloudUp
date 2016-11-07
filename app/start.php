@@ -1,5 +1,4 @@
 <?php
-
 use Aws\S3\S3Client;
 use Aws\S3\Exception\S3Exception;
 
@@ -14,17 +13,19 @@ $s3= S3Client::factory([
         'secret' => $config['s3']['secret'],],
     'scheme' => 'http'
 	]);
+$bucket= $_SESSION['bucket']; 
 if ($_SESSION['stat']==1)
 {
-  $para= $_SESSION['bucket'];
-function create_bucket($para) {
-     try{      $s3->createBucket(array(
-   	'Bucket'             => $para;
-    'LocationConstraint' => 'us-west-2'));
+  try{
+  $s3 -> createBucket(array(
+   	         'Bucket' => $bucket,
+             'LocationConstraint' => 'us-west-2'));
     }
     catch(S3Exception $e)
     {
-        echo $e->getMessage();
+      echo $e->getMessage();
     }
+}
+  
 
 ?>

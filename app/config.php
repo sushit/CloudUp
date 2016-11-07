@@ -1,5 +1,5 @@
 <?php 
-session_start();
+@session_start();
 return [
 	's3'=> [
 		'key' => 'AKIAJB6WYCSALOJFGRXQ',

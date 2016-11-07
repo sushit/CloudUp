@@ -3,22 +3,14 @@
 	function random_num($size) 
 	{
 	$alpha_key = '';
-	$keys = range('A', 'Z');
+	$keys = range('a', 'z');
 
-	for ($i = 0; $i < 2; $i++) {
+	for ($i = 0; $i < 11; $i++) {
 		$alpha_key .= $keys[array_rand($keys)];
 	}
 
-	$length = $size - 2;
 
-	$key = '';
-	$keys = range(0, 9);
-
-	for ($i = 0; $i < $length; $i++) {
-		$key .= $keys[array_rand($keys)];
-	}
-
-	return $alpha_key . $key;
+	return $alpha_key;
 	}
 
 		
@@ -30,7 +22,7 @@
 		session_start();
 		$username= mysql_real_escape_string($_POST['username']);
 		$password=mysql_real_escape_string($_POST['password']);
-		$password2=mysql_real_escape_string($_POST['password2']);	
+		$password2=mysql_real_escape_string($_POST['password2']);
 		if ($password == $password2) {
 			$password=md5($password);
 			$bucket= random_num(9);
@@ -63,10 +55,14 @@
 <head>
 	<title>Register User</title>
 </head>
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css"> 
 <body>
 <div class="header">
+<header class="w3-container w3-teal">
 	<h1>Register User</h1>
+	</header>
 </div>
+<div class="w3-container w3-half w3-margin-top">
 <form method="post" action=""><table>
 	<tr>
 		<td>Username:</td>
@@ -85,6 +81,8 @@
 		<td><input type="submit" name="reg_btn" class="Register"></td>
 	</tr>
 </table>
+<br>
+<a href="login.php"> Already a member? Login here </a>
 </form>
 </body>
 </html>

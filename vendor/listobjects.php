@@ -1,18 +1,20 @@
 <?php
 $config= require '..\app\config.php';
 require '..\app\start.php';
+require '..\vendor\front.php';
 $objects = $s3->getIterator('ListObjects',[
 	'Bucket' => $config['s3']['bucket']
 	]);
 
 
-?>s
+?>
 <!DOCTYPE html>
 <html>
 <head>
 	<title>List of objects</title>
 </head>
 <body>
+<p> Your Files are </p> 
 <table>
 	<thead>
 		<tr>
