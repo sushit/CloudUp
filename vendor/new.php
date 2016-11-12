@@ -21,7 +21,7 @@ if (isset($_FILES['file']))
 	{
 			$s3->putObject([
 			'Bucket' => $config['s3']['bucket'],
-			'Key' => "uploads/{$name}",
+			'Key' => "uploads/{$name}", //DIRECTORY
 			'Body' => fopen($temp_file_path, 'rb'),  //rb - reading 
 			'ACL' => 'public-read'  //access control ob_get_level(oid)
 			]);

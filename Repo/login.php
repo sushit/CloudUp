@@ -7,8 +7,8 @@
 	if (isset($_POST['log_btn'])) {
 		$username= mysql_real_escape_string($_POST['username']);
 		$password= mysql_real_escape_string($_POST['password']);
-		$password= md5($password);
-		$sql="SELECT * FROM admin WHERE username='$username'";	
+		$mdpassword= md5($password);
+		$sql="SELECT * FROM admin WHERE username='$username' AND password='$mdpassword'";
 		$result= mysqli_query($db,$sql);
 		if (mysqli_num_rows($result) == 1)
 		{	
@@ -22,7 +22,6 @@
 			{
 					$_SESSION['bucket']=$row["bucket"];
 			}
-			echo $_SESSION['bucket'];
 		}
 			//$_SESSION['bucket']=$op_bucket;
 			//echo $op_bucket;
@@ -33,8 +32,6 @@
 			$_SESSION['message']="Username/Password incorrect";
 		}
 		$_SESSION['stat']=0;
-
-		
 	}
 	
 ?>

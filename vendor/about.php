@@ -29,7 +29,7 @@
 
 </nav>
 <div class="container-fluid">
-THIS IS A FILE STORAGE MANAGER CREATED BY SUSHIT,SUSHANT,SHREYA AND RAUNAK</div>
+THIS IS A FILE STORAGE MANAGER CREATED IN CS-2</div>
 </body>
 </html>
 

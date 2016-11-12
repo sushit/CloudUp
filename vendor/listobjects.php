@@ -32,7 +32,9 @@ th, td {
 tr:nth-child(even){background-color: #f2f2f2}
 </style>
 <body>
+<div class="container-fluid">
 <h4 align="center"> Your Files are </h4> 
+</div>
 <table>
 	<thead>
 		<tr>
